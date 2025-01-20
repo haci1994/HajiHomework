@@ -52,3 +52,34 @@ else
 
 Console.WriteLine("-----------------");
 Console.WriteLine("-----------------");
+
+
+//4. İstifadəçinin yaşına əsasən, onu bir kateqoriyaya aid edin:
+//0 - 12: Uşaq
+//13-19: Yeniyetmə
+//20 və yuxarı: Böyük.
+
+Console.WriteLine("Yas kateqoriyasi proqrami!");
+Console.WriteLine("-----------------");
+
+Console.Write("Yasi daxil edin:");
+int age = int.Parse(Console.ReadLine());
+
+bool kids = age >= 0 && age < 13;
+bool teen = age >=13 & age < 19;
+bool adult = age >=20 && age <150;
+
+if (kids){
+    Console.WriteLine("Usaq");
+} else if(teen) {
+    Console.WriteLine("Yeniyetme");
+} else if(adult)
+    {
+    Console.WriteLine("Boyuk");
+} else
+{
+    Console.WriteLine($"{age} yas ucun duzgun deyer deyil!");
+}
+
+Console.WriteLine("-----------------");
+Console.WriteLine("-----------------");
