@@ -97,7 +97,56 @@ double n2 = double.Parse(Console.ReadLine());
 
 if (n1 > n2) {
     Console.WriteLine($"{n1} > {n2}. ({n1}, {n2}-den (dan) {n1 - n2} vahid boyukdur!)");
-} else
+} else if (n1 < n2) 
 {
     Console.WriteLine($"{n2} > {n1}. ({n2}, {n1}-den (dan) {n2-n1} vahid boyukdur!)");
+} else  {
+        Console.WriteLine($"{n1} = {n2}");
+    }
+
+Console.WriteLine("-----------------");
+Console.WriteLine("-----------------");
+
+//6. İstifadəçidən 1-dən 7-yə qədər bir rəqəm daxil etməsini istəyin və ona uyğun həftənin gününü çap edin.Məsələn: 1 → Bazar ertəsi, 2 → Çərşənbə axşamı və s.
+
+Console.WriteLine("Heftenin gununun adini teyin eden proqram!");
+Console.Write("Heftenin gununu daxil edin:");
+byte weekday = byte.Parse(Console.ReadLine());
+
+switch (weekday) {
+    case 1:
+        Console.WriteLine("Bazar ertesi");
+        return;
+    case 2:
+        Console.WriteLine("Cersenbe axsami");
+        return;
+    case 3:
+        Console.WriteLine("cersenbe");
+        return;
+    case 4:
+        Console.WriteLine("cume axsami");
+        return;
+    case 5:
+        Console.WriteLine("cume");
+        return;
+    case 6:
+        Console.WriteLine("senbe");
+        return;
+    case 7:
+        Console.WriteLine("bazar");
+        return;
+    default:
+        Console.WriteLine("Heftenin gununu duzgun daxil edin!");
+        return;
 }
+
+// IF ile yazsaydim asagidaki kimi yazardim:
+// if (weekday == 1) {
+//          Console.WriteLine("Bazar ertesi");}
+//  else if (weekday == 2) {
+//          Console.WriteLine("Cersenbe axsami");}
+//  else if ..............
+//  else {Console.WriteLine("Heftenin gununu duzgun daxil edin!");}
+
+Console.WriteLine("-----------------");
+Console.WriteLine("-----------------");
