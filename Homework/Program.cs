@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //1. Verilmiş iki ədədin cəmini hesablayan proqram yazın.
-Console.WriteLine("Verilmiş iki ededin cemini hesablayan proqram!");
+Console.WriteLine("1. Verilmiş iki ededin cemini hesablayan proqram!");
 Console.WriteLine("-----------------");
 Console.Write("İlk ededi daxil edin: ");
 int number1 = int.Parse(Console.ReadLine());
@@ -15,10 +15,10 @@ Console.WriteLine("-----------------");
 
 //2. Verilmiş ədədin cüt və ya tək olduğunu təyin edən proqram yazın.
 
-Console.WriteLine("Verilmiş ededin cüt ve ya tek olduğunu teyin eden proqram!");
+Console.WriteLine("2. Verilmiş ededin cüt ve ya tek olduğunu teyin eden proqram!");
 Console.WriteLine("-----------------");
 
-Console.Write("Yoxlamaq istediyiniz ededi daxil edin!:");
+Console.Write("Yoxlamaq istediyiniz ededi daxil edin:");
 int number3 = int.Parse(Console.ReadLine());
 
 if (number3 % 2 == 0) {
@@ -27,3 +27,5 @@ if (number3 % 2 == 0) {
     Console.WriteLine($"{number3} - tek ededdir");
 }
 
+Console.WriteLine("-----------------");
+Console.WriteLine("-----------------");
