@@ -29,3 +29,26 @@ if (number3 % 2 == 0) {
 
 Console.WriteLine("-----------------");
 Console.WriteLine("-----------------");
+
+//3. Verilmiş bir ədədin müsbət, mənfi və ya sıfır olub-olmadığını təyin edən proqram yazın.
+
+Console.WriteLine("2. Verilmiş ededin musbet, menfi ve ya sifir olgugunu teyin eden proqram!");
+Console.WriteLine("-----------------");
+
+Console.Write("Yoxlamaq istediyiniz ededi daxil edin:");
+double number4 = double.Parse(Console.ReadLine());
+
+if (number4 == 0)
+{
+    Console.WriteLine($"{number4} yoxlamanin neticesi: Eded SIFIR-a beraberdir!");
+} else if (number4 < 0)
+{
+    Console.WriteLine($"{number4} yoxlamanin neticesi: Eded MENFI-dir!");
+}
+else
+{
+    Console.WriteLine($"{number4} yoxlamanin neticesi: Eded MUSBET-dir!");
+}
+
+Console.WriteLine("-----------------");
+Console.WriteLine("-----------------");
