@@ -83,3 +83,21 @@ if (kids){
 
 Console.WriteLine("-----------------");
 Console.WriteLine("-----------------");
+
+//5. İki ədəddən hansının daha böyük olduğunu müəyyən edən proqram yazın.
+
+Console.WriteLine("Iki ededi muqayise eden proqram");
+Console.WriteLine("-----------------");
+
+Console.Write("Birinci ededi daxil edin:");
+double n1 = double.Parse(Console.ReadLine());
+
+Console.Write("Ikinci ededi daxil edin:");
+double n2 = double.Parse(Console.ReadLine());
+
+if (n1 > n2) {
+    Console.WriteLine($"{n1} > {n2}. ({n1}, {n2}-den (dan) {n1 - n2} vahid boyukdur!)");
+} else
+{
+    Console.WriteLine($"{n2} > {n1}. ({n2}, {n1}-den (dan) {n2-n1} vahid boyukdur!)");
+}
