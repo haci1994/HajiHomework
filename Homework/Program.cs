@@ -121,6 +121,7 @@ Console.WriteLine("-----------------");
 //6. İstifadəçidən 1-dən 7-yə qədər bir rəqəm daxil etməsini istəyin və ona uyğun həftənin gününü çap edin.Məsələn: 1 → Bazar ertəsi, 2 → Çərşənbə axşamı və s.
 
 Console.WriteLine("Heftenin gununun adini teyin eden proqram!");
+Console.WriteLine("-----------------");
 Console.Write("Heftenin gununu daxil edin:");
 byte weekday = byte.Parse(Console.ReadLine());
 
@@ -166,6 +167,7 @@ Console.WriteLine("-----------------");
 //7. İlin təkcə 365 gündən yox, həm də sıçrayış ili (leap year) olub-olmadığını yoxlayın.İl 4-ə tam bölünməlidir, amma 100-ə bölünməməlidir və ya 400-ə tam bölünməlidir
 
 Console.WriteLine("Ilin -Leap Year- oldugunu yoxlayan proqram");
+Console.WriteLine("-----------------");
 
 Console.Write("Yoxlamaq istediyiniz ili daxil edin:");
 
@@ -207,6 +209,7 @@ Console.WriteLine("-----------------");
 //9.Üç tərəfin uzunluğuna əsasən, həmin ölçülərlə üçbucağın mövcud olub-olmadığını yoxlayın. (Üçbucaq şərti: Hər iki tərəfin cəmi üçüncü tərəfdən böyük olmalıdır.)
 
 Console.WriteLine("Duzgun ucbucagi yoxlayan proqram!");
+Console.WriteLine("-----------------");
 
 Console.Write("1-ci terefin uzunlugu:");
 int a = int.Parse(Console.ReadLine());
@@ -221,3 +224,32 @@ if (a + b > c && a + c > b && b + c > a)
     Console.WriteLine($"{a}, {b} ve {c} ucbucagin terefleri ola biler");
 else
     Console.WriteLine("Daxil etdiyiniz deyerler uzre ucbucaq qurmaq mumkun deyil.");
+
+Console.WriteLine("-----------------");
+Console.WriteLine("-----------------");
+
+//10. Verilmiş 4 rəqəmli bir tam ədədin rəqəmlərinin cəmini hesablayın.Məsələn: 1234 → 1 + 2 + 3 + 4 = 10.
+
+Console.WriteLine("Verilmis 4 reqemli bir tam ededin reqemlerinin cemini hesablayan proqram!");
+Console.WriteLine("-----------------");
+
+Console.Write("4 reqemli bir eded daxil edin: ");
+
+int fourDigit = int.Parse(Console.ReadLine());
+
+int sum = 0;
+
+if (fourDigit<1000 || fourDigit >9999)
+{
+    Console.WriteLine("4 reqemli eded daxil ETMEDINIZ!");
+} else
+{
+    int r1 = fourDigit % 10;
+    int r2 = fourDigit/10 % 10;
+    int r3 = fourDigit/100 % 10;
+    int r4 = fourDigit / 1000;
+
+    sum = r1 + r2 + r3 + r4;
+
+    Console.WriteLine($"{r4} + {r3} + {r2 } + {r1} = {sum}");
+}
