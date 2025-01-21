@@ -200,3 +200,24 @@ if (correctPass == enteredPass)
     Console.WriteLine("Giris ugurludur!");
 else
     Console.WriteLine("Kod yanlisdir, yeniden cehd edin");
+
+Console.WriteLine("-----------------");
+Console.WriteLine("-----------------");
+
+//9.Üç tərəfin uzunluğuna əsasən, həmin ölçülərlə üçbucağın mövcud olub-olmadığını yoxlayın. (Üçbucaq şərti: Hər iki tərəfin cəmi üçüncü tərəfdən böyük olmalıdır.)
+
+Console.WriteLine("Duzgun ucbucagi yoxlayan proqram!");
+
+Console.Write("1-ci terefin uzunlugu:");
+int a = int.Parse(Console.ReadLine());
+
+Console.Write("2-ci terefin uzunlugu:");
+int b = int.Parse(Console.ReadLine());
+
+Console.Write("3-cu terefin uzunlugu:");
+int c = int.Parse(Console.ReadLine());
+
+if (a + b > c && a + c > b && b + c > a)
+    Console.WriteLine($"{a}, {b} ve {c} ucbucagin terefleri ola biler");
+else
+    Console.WriteLine("Daxil etdiyiniz deyerler uzre ucbucaq qurmaq mumkun deyil.");
