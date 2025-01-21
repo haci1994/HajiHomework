@@ -188,4 +188,15 @@ if (year%4 ==0)
 Console.WriteLine("-----------------");
 Console.WriteLine("-----------------");
 
+//8. İstifadəçidən parol istəyin. Əgər parol düzgünsə, "Giriş uğurludur", əks halda "Yanlış parol" yazdırın.Məsələn: Doğru parol: 12345.
 
+Console.Write("Daxil olmaq ucun kodu daxil edin:");
+
+string correctPass = "12345";
+
+string enteredPass = Console.ReadLine();
+
+if (correctPass == enteredPass)
+    Console.WriteLine("Giris ugurludur!");
+else
+    Console.WriteLine("Kod yanlisdir, yeniden cehd edin");
