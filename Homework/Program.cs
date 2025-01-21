@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-//1. Verilmiş iki ədədin cəmini hesablayan proqram yazın.
+﻿//1. Verilmiş iki ədədin cəmini hesablayan proqram yazın.
 Console.WriteLine("1. Verilmiş iki ededin cemini hesablayan proqram!");
 Console.WriteLine("-----------------");
 Console.Write("İlk ededi daxil edin: ");
@@ -9,7 +7,7 @@ int number1 = int.Parse(Console.ReadLine());
 Console.Write($"{number1} + (ikinci eded:) ");
 int number2 = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"= {number1+number2}");
+Console.WriteLine($"= {number1 + number2}");
 Console.WriteLine("-----------------");
 Console.WriteLine("-----------------");
 
@@ -21,9 +19,12 @@ Console.WriteLine("-----------------");
 Console.Write("Yoxlamaq istediyiniz ededi daxil edin:");
 int number3 = int.Parse(Console.ReadLine());
 
-if (number3 % 2 == 0) {
+if (number3 % 2 == 0)
+{
     Console.WriteLine($"{number3} - cüt ededdir");
-} else {
+}
+else
+{
     Console.WriteLine($"{number3} - tek ededdir");
 }
 
@@ -41,7 +42,8 @@ double number4 = double.Parse(Console.ReadLine());
 if (number4 == 0)
 {
     Console.WriteLine($"{number4} yoxlamanin neticesi: Eded SIFIR-a beraberdir!");
-} else if (number4 < 0)
+}
+else if (number4 < 0)
 {
     Console.WriteLine($"{number4} yoxlamanin neticesi: Eded MENFI-dir!");
 }
@@ -66,17 +68,22 @@ Console.Write("Yasi daxil edin:");
 int age = int.Parse(Console.ReadLine());
 
 bool kids = age >= 0 && age < 13;
-bool teen = age >=13 & age < 19;
-bool adult = age >=20 && age <150;
+bool teen = age >= 13 & age < 19;
+bool adult = age >= 20 && age < 150;
 
-if (kids){
+if (kids)
+{
     Console.WriteLine("Usaq");
-} else if(teen) {
+}
+else if (teen)
+{
     Console.WriteLine("Yeniyetme");
-} else if(adult)
-    {
+}
+else if (adult)
+{
     Console.WriteLine("Boyuk");
-} else
+}
+else
 {
     Console.WriteLine($"{age} yas ucun duzgun deyer deyil!");
 }
@@ -95,14 +102,18 @@ double n1 = double.Parse(Console.ReadLine());
 Console.Write("Ikinci ededi daxil edin:");
 double n2 = double.Parse(Console.ReadLine());
 
-if (n1 > n2) {
-    Console.WriteLine($"{n1} > {n2}. ({n1}, {n2}-den (dan) {n1 - n2} vahid boyukdur!)");
-} else if (n1 < n2) 
+if (n1 > n2)
 {
-    Console.WriteLine($"{n2} > {n1}. ({n2}, {n1}-den (dan) {n2-n1} vahid boyukdur!)");
-} else  {
-        Console.WriteLine($"{n1} = {n2}");
-    }
+    Console.WriteLine($"{n1} > {n2}. ({n1}, {n2}-den (dan) {n1 - n2} vahid boyukdur!)");
+}
+else if (n1 < n2)
+{
+    Console.WriteLine($"{n2} > {n1}. ({n2}, {n1}-den (dan) {n2 - n1} vahid boyukdur!)");
+}
+else
+{
+    Console.WriteLine($"{n1} = {n2}");
+}
 
 Console.WriteLine("-----------------");
 Console.WriteLine("-----------------");
@@ -113,31 +124,32 @@ Console.WriteLine("Heftenin gununun adini teyin eden proqram!");
 Console.Write("Heftenin gununu daxil edin:");
 byte weekday = byte.Parse(Console.ReadLine());
 
-switch (weekday) {
+switch (weekday)
+{
     case 1:
         Console.WriteLine("Bazar ertesi");
-        return;
+        break;
     case 2:
         Console.WriteLine("Cersenbe axsami");
-        return;
+        break;
     case 3:
         Console.WriteLine("cersenbe");
-        return;
+        break;
     case 4:
         Console.WriteLine("cume axsami");
-        return;
+        break;
     case 5:
         Console.WriteLine("cume");
-        return;
+        break;
     case 6:
         Console.WriteLine("senbe");
-        return;
+        break;
     case 7:
         Console.WriteLine("bazar");
-        return;
+        break;
     default:
         Console.WriteLine("Heftenin gununu duzgun daxil edin!");
-        return;
+        break;
 }
 
 // IF ile yazsaydim asagidaki kimi yazardim:
@@ -150,3 +162,20 @@ switch (weekday) {
 
 Console.WriteLine("-----------------");
 Console.WriteLine("-----------------");
+
+//7. İlin təkcə 365 gündən yox, həm də sıçrayış ili (leap year) olub-olmadığını yoxlayın.İl 4-ə tam bölünməlidir, amma 100-ə bölünməməlidir və ya 400-ə tam bölünməlidir
+
+Console.WriteLine("Ilin -Leap Year- oldugunu yoxlayan proqram");
+
+Console.Write("Yoxlamaq istediyiniz ili daxil edin:");
+
+int year = int.Parse(Console.ReadLine());
+
+if (year % 400 == 0)
+{
+    Console.WriteLine($"{year} - Sicrayis ilidir!");
+}
+else
+{
+    Console.WriteLine($"{year} - Sicrayis ili deyil!");
+}
