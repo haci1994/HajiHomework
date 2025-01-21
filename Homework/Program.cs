@@ -171,11 +171,21 @@ Console.Write("Yoxlamaq istediyiniz ili daxil edin:");
 
 int year = int.Parse(Console.ReadLine());
 
-if (year % 400 == 0)
+if (year%4 ==0)
 {
-    Console.WriteLine($"{year} - Sicrayis ilidir!");
-}
-else
+    if (year%100 == 0 && year%400 >0)
+    {
+        Console.WriteLine("365");
+    } else
+    {
+        Console.WriteLine("366");
+    }
+} else
 {
-    Console.WriteLine($"{year} - Sicrayis ili deyil!");
+    Console.WriteLine("365");
 }
+
+Console.WriteLine("-----------------");
+Console.WriteLine("-----------------");
+
+
